@@ -1,0 +1,55 @@
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr><th><{$lang_xwhois_header}></th></tr>
+  <tr>
+    <td align="center">
+      <form action="domainresult.php" method="post">
+        www.<input name="xwhois_domain" type="text" size="20" maxlength="100">  
+        <select name="xwhois_domainext" size="1">
+                <option value=".com">.com</option>
+                <option value=".net">.net</option>
+                <option value=".org">.org</option>
+                <option value=".info">.info</option>
+                <option value=".biz">.biz</option>
+                <option value=".us">.us</option>
+                <option value=".ws">.ws</option>
+				<option value=".bz">.bz</option>
+				<option value=".nu">.nu</option>
+				<option value=".ca">.ca</option>
+				<option value=".cc">.cc</option>
+				<option value=".name">.name</option>
+				<option value=".tv">.tv</option>
+        </select>
+        <input type="submit" value="<{$lang_xwhois_search}>">
+      </form>
+    </td>
+  </tr>
+  <tr><td align="center"><{$lang_xwhois_instr}></td></tr>
+  <tr><td>
+  <{if $lang_xwhois_domainresult == "1"}>
+    <{if $lang_xwhois_fulldomain != ""}>
+	<table>
+    <tr>
+      <td align="left">
+        <{$lang_xwhois_fulldomain}>
+      </td>
+	</tr>
+	<tr>
+	  <td>
+        <{$lang_xwhois_lookup}>
+      </td>
+	</tr>
+	</table>
+    <{else}>
+	<table>
+	<tr>
+      <td align="center">
+        <{$lang_xwhois_lookup}>
+      </td>
+	</tr>
+	</table>  
+    <{/if}>
+  <{else}>
+    &nbsp;
+  <{/if}>
+  </td></tr>
+</table>
